@@ -1,2 +1,184 @@
 /// Homepage Styles File
 /// Here we import all the Styles files we need for our Homepage.
+///
+.main-content-header {
+  margin-right: 109px;
+
+  h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.002em;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.box-positon {
+  display: flex;
+  flex-direction: row;
+
+  &:nth-of-type(1) {
+    .main-content-box:nth-of-type(2)
+      .main-content-box__img-border:nth-of-type(1) {
+      background-color: var(--color-box2);
+    }
+  }
+
+  &:nth-of-type(2) {
+    .main-content-box:nth-of-type(1)
+      .main-content-box__img-border:nth-of-type(1) {
+      background-color: var(--color-box3);
+    }
+  }
+
+  &:nth-of-type(2) {
+    .main-content-box:nth-of-type(2)
+      .main-content-box__img-border:nth-of-type(1) {
+      background-color: var(--color-box4);
+    }
+  }
+
+  .main-content-box {
+    text-align: center;
+    border-radius: 24px;
+    background-color: var(--color-box-background);
+    width: 268px;
+    height: 240px;
+
+    &:nth-of-type(even) {
+      margin: 0 0 31px 12px;
+    }
+
+    &:nth-of-type(odd) {
+      margin: 0 12px 31px 0;
+    }
+
+    p {
+      opacity: 50%;
+      margin: 0 auto;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      width: 88%;
+    }
+
+    h2 {
+      margin: 15px 0 15px 0;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &__img-border {
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 64px;
+      height: 64px;
+      background-color: var(--color-box1);
+      border-radius: 16px;
+    }
+
+    img {
+      position: relative;
+      top: 25%;
+    }
+  }
+}
+
+@media screen and (max-width: 834px) {
+  #home-page {
+    flex-direction: column;
+    margin: 20%;
+  }
+
+  .main-content-header {
+    margin: 0 auto;
+  }
+
+  .box-positon .main-content-box p {
+    font-size: 14px;
+  }
+
+  .box-positon {
+    .main-content-box {
+      &:nth-of-type(even) {
+        margin: 0 0 16px 8px;
+      }
+
+      &:nth-of-type(odd) {
+        margin: 0 8px 16px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #home-page {
+    flex-direction: column;
+    margin: 2%;
+  }
+
+  .main-content-header {
+    margin: 0 auto;
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .box-positon .main-content-box p {
+    font-size: 14px;
+  }
+
+  .box-positon {
+    display: flex;
+    flex-direction: column;
+    .main-content-box {
+      width: 343px;
+      height: 196px;
+
+      &:nth-of-type(even) {
+        margin: 0 0 16px 0;
+      }
+
+      &:nth-of-type(odd) {
+        margin: 0 0 16px 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 719px) {
+  .box-positon {
+    display: flex;
+
+    .main-content-box {
+      width: 30vw;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1050px) {
+  #home-page {
+    margin: 5%;
+  }
+
+  .main-content-header {
+    margin-right: 20px;
+  }
+
+  .box-positon {
+    .main-content-box {
+      width: 230px;
+      height: 236px;
+    }
+  }
+}

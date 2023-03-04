@@ -6,10 +6,12 @@
 @import "styles/fonts.scss";
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: var(--color-primary);
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--color-primary1);
 }
 
-p {
-  color: var(--color-on-surface);
+#home-page {
+  display: flex;
+  color: var(--color-seconcary1);
+  margin: 10%;
 }
